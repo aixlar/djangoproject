@@ -4,7 +4,7 @@ CONFIG = {
     # 'python':       '/usr/bin/python',
     'args': (
         '--bind=0.0.0.0:8000',
-        '--access-logfile -',
+        '--access-logfile "-"',
         'hello:app',
     ),
 }
