@@ -1,9 +1,17 @@
-cd /home/
+# sudo ln -sf source soft-link
 
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
-sudo /etc/init.d/nginx restart
+sudo ln -sf /home/box/web/etc/hello.py   /etc/gunicorn.d/hello.py
 
-sudo ln -sf /home/box/web/etc/hello.py /etc/gunicorn.d/hello.py
+sudo /etc/init.d/nginx    restart
 sudo /etc/init.d/gunicorn restart
 
-gunicorn --bind 0.0.0.0:8080 hello:app &
+# sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
+# sudo /etc/init.d/nginx restart
+#
+# sudo ln -sf /home/box/web/etc/hello.py /etc/gunicorn.d/hello.py
+# sudo /etc/init.d/gunicorn restart
+#
+# cd /home/box/web/
+# gunicorn --bind 0.0.0.0:8080 hello:app &
+# # gunicorn --bind 0.0.0.0:8080 hello:app &
