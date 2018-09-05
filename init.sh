@@ -1,6 +1,5 @@
-alias python=python3                                                            #
+# alias python=python3                                                          #
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default       #
 sudo /etc/init.d/nginx restart                                                  #
-# sudo ln -sf /home/box/web/etc/hello.py   /etc/gunicorn.d/hello.py             #
-sudo ln -sf /home/box/web/etc/hello.py /etc/gunicorn.d/hello.py                 #
-sudo /etc/gunicorn.d/hello.py restart                                           #
+sudo ln -sf /home/box/web/etc/hello.py /etc/gunicorn.d/hello.py
+sudo /etc/init.d/gunicorn restart                                               #
